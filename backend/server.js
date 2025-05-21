@@ -12,7 +12,7 @@ const _dirname = path.resolve();
 app.use(express.json())
 dotenv.config()
 app.use(cors({
-    origin: "http://localhost:5173", // your frontend port
+    origin: "https://mern-project-backend-j0hf.onrender.com", // your frontend port
     credentials: true
 }));
 app.use("/products",ProductRoutes)
