@@ -6,7 +6,7 @@
 "scripts": {
   "dev": "concurrently \"cd frontend && pnpm run dev\" \"cd backend && nodemon server.js\"",
   "build": "cd frontend && pnpm install && pnpm run build",
-  "start": "cd frontend && pnpm start"
+ "start": " node backend/server.js" 
 },
   "keywords": [],
   "author": "",
