@@ -16,8 +16,6 @@ function HomePage() {
   }, [fetchProducts])
   console.log(products);
 
-  ;
-
   return (
     <div className='flex flex-col gap-3 md:pt-32 xlpt-24'>
       
