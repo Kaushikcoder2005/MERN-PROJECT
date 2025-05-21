@@ -10,10 +10,12 @@ const path = require("path")
 
 app.use(express.json())
 dotenv.config()
+
 app.use(cors({
     origin: "http://localhost:5173", // your frontend port
     credentials: true
 }));
+
 app.use("/products",ProductRoutes)
 
 const _dirname = path.resolve();
