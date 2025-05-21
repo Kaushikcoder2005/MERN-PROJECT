@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "dev": "concurrently \"cd frontend && pnpm run dev\" \"cd backend && nodemon server.js\"",
-  "build": "cd frontend && pnpm install && pnpm run build",
- "start": " node backend/server.js" 
-},
+  "scripts": {
+    "dev": " nodemon backend/server.js",
+    "build": "pnpm install && cd frontend && pnpm install && pnpm run build && cd ..",
+    "start": " node backend/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
