@@ -13,7 +13,7 @@ export const useProductStore = create((set) => ({
                 message: "Please fill all the fields."
             }
         }
-        const res = await fetch("https://mern-project-backend-szdg.onrender.com/products", {
+        const res = await fetch("http://localhost:5000/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -31,7 +31,7 @@ export const useProductStore = create((set) => ({
 
     
     fetchProducts: async () => {
-        const res = await fetch("https://mern-project-backend-szdg.onrender.com/products")
+        const res = await fetch("http://localhost:5000/products")
         const data = await res.json()
         set({ products: data.data })
     },
@@ -39,7 +39,7 @@ export const useProductStore = create((set) => ({
 
 
     deleteProduct: async (pid) => {
-        const res = await fetch(`https://mern-project-backend-szdg.onrender.com/${pid}`, {
+        const res = await fetch(`http://localhost:5000/${pid}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -55,7 +55,7 @@ export const useProductStore = create((set) => ({
 
     updateProduct: async (pid, updatedProduct) => {
         try {
-            const res = await fetch(`https://mern-project-backend-szdg.onrender.com/${pid}`, {
+            const res = await fetch(`http://localhost:5000/${pid}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
