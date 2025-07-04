@@ -30,7 +30,7 @@ app.get(/^\/(?!api|products).*/, (req, res) => {
 });
 
 // ✅ Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000 || "https://mern-project-r03l.onrender.com";
 app.listen(PORT, () => {
     connectDB();
     console.log(`🚀 Server started at http://localhost:${PORT}`);
