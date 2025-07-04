@@ -13,7 +13,7 @@ const _dirname = path.resolve();
 // ✅ Middleware
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173 " || "https://mern-project-frontend-6qsv.onrender.com", // frontend dev server
+    origin: "http://localhost:5173 " || "https://mern-project-frontend-e68k.onrender.com", // frontend dev server
     credentials: true
 }));
 
