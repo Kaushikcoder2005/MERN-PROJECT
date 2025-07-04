@@ -5,7 +5,7 @@ const {createProduct,deleteProduct,getProduct,updateProduct} = require("../contr
 router.get("/",getProduct )
 router.put("/:id", updateProduct)
 router.post("/",createProduct )
-router.delete("/:id", deleteProduct)
+router.delete("/delete/:id", deleteProduct)
 
 
 module.exports = router

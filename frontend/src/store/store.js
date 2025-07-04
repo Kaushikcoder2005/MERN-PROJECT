@@ -39,7 +39,7 @@ export const useProductStore = create((set) => ({
 
 
     deleteProduct: async (pid) => {
-        const res = await fetch(`http://localhost:5000/${pid}`, {
+        const res = await fetch(`http://localhost:5000/products/${pid}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -55,7 +55,7 @@ export const useProductStore = create((set) => ({
 
     updateProduct: async (pid, updatedProduct) => {
         try {
-            const res = await fetch(`http://localhost:5000/${pid}`, {
+            const res = await fetch(`http://localhost:5000/products/${pid}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
