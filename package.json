@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node backend/server.js",
     "build": "pnpm install && cd frontend && pnpm install --frozen-lockfile && pnpm run build",
-    "start": "node backend/server.js"
+    "start": "nodemon backend/server.js"
   },
   "keywords": [],
   "author": "",

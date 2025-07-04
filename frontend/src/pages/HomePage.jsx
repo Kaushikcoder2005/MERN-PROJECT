@@ -15,9 +15,9 @@ function HomePage() {
     fetchProducts()
   }, [fetchProducts])
   console.log(products);
-
+ 
   return (
-    <div className='flex flex-col gap-3 md:pt-32 xlpt-24'>
+    <div className='flex flex-col gap-3 pt-32 xl:pt-24'>
       
       {/* Header */}
       <div className='flex flex-col justify-center items-center text-2xl gap-6'>

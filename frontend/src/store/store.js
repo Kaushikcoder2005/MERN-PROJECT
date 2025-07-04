@@ -3,6 +3,9 @@ import { create } from "zustand"
 export const useProductStore = create((set) => ({
     products: [],
     setProducts: (products) => set({ products }),
+
+
+    
     createProducts: async (newProduct) => {
         if (!newProduct.name || !newProduct.image || !newProduct.price) {
             return {
@@ -24,11 +27,17 @@ export const useProductStore = create((set) => ({
             message: "Product created succesfully."
         }
     },
+
+
+    
     fetchProducts: async () => {
         const res = await fetch("http://localhost:5000/products")
         const data = await res.json()
         set({ products: data.data })
     },
+
+
+
     deleteProduct: async (pid) => {
         const res = await fetch(`http://localhost:5000/products/${pid}`, {
             method: "DELETE",
@@ -41,6 +50,9 @@ export const useProductStore = create((set) => ({
         set((state) => ({ products: state.products.filter((product) => product._id !== pid) }));
         return { success: true, message: data.message };
     },
+
+
+
     updateProduct: async (pid, updatedProduct) => {
         try {
             const res = await fetch(`http://localhost:5000/products/${pid}`, {
